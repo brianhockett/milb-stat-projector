@@ -1,0 +1,8 @@
+requests
+bs4
+pandas
+numpy
+python-TIME
+streamlit
+matplotlib
+pybaseball
