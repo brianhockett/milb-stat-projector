@@ -33,10 +33,10 @@ def process_statcast():
     mlb_pitchers = pd.concat([mlb_pitchers_2021, mlb_pitchers_2022, mlb_pitchers_2023, mlb_pitchers_2024], ignore_index = True)
 
     # Dropping useless/disruptive columns
-    milb_pitchers = milb_pitchers.drop(columns = ['Pitches', 'Total', 'Pitch %', 'Hits', '1B', '2B', '3B', 'HR', 'SO', 'BB', 'Whiffs', 'Swings', 'Barrels', 'Dist (ft)', 'Spin (RPM)'])
-    mlb_pitchers = mlb_pitchers.drop(columns = ['Pitches', 'Total', 'Pitch %', 'Hits', '1B', '2B', '3B', 'HR', 'SO', 'BB', 'Whiffs', 'Swings', 'Barrels', 'Dist (ft)', 'Spin (RPM)'])
-    milb_batters = milb_batters.drop(columns = ['Pitches', 'Total', 'Pitch %', 'Hits', '1B', '2B', '3B', 'HR', 'SO', 'BB', 'Whiffs', 'Swings', 'Barrels', 'Dist (ft)'])
-    mlb_batters = mlb_batters.drop(columns = ['Pitches', 'Total', 'Pitch %', 'Hits', '1B', '2B', '3B', 'HR', 'SO', 'BB', 'Whiffs', 'Swings', 'Barrels', 'Dist (ft)'])
+    milb_pitchers = milb_pitchers.drop(columns = ['Total', 'Pitch %', 'Hits', '1B', '2B', '3B', 'HR', 'SO', 'BB', 'Whiffs', 'Swings', 'Barrels', 'Dist (ft)', 'Spin (RPM)'])
+    mlb_pitchers = mlb_pitchers.drop(columns = ['Total', 'Pitch %', 'Hits', '1B', '2B', '3B', 'HR', 'SO', 'BB', 'Whiffs', 'Swings', 'Barrels', 'Dist (ft)', 'Spin (RPM)'])
+    milb_batters = milb_batters.drop(columns = ['Total', 'Pitch %', 'Hits', '1B', '2B', '3B', 'HR', 'SO', 'BB', 'Whiffs', 'Swings', 'Barrels', 'Dist (ft)'])
+    mlb_batters = mlb_batters.drop(columns = ['Total', 'Pitch %', 'Hits', '1B', '2B', '3B', 'HR', 'SO', 'BB', 'Whiffs', 'Swings', 'Barrels', 'Dist (ft)'])
 
     # Getting rid of prospect rankings to ensure matching between MiLB and MLB names
     milb_batters['Player'] = milb_batters['Player'].str.replace(r' \w+ #\d+', '', regex = True)
@@ -97,15 +97,11 @@ def train_batter(milb_batters, batter_columns, year_plus_num_columns):
     y = milb_batters[year_plus_num_columns]
     
     # Split the data into training and validation sets
-    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=int(time.time()))
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
     
     # Create the model and train it on the training set
     model = LinearRegression()
     model.fit(X_train, y_train)
-    
-    # Optionally, you can evaluate the model on the validation set
-    val_score = model.score(X_val, y_val)
-    print(f"Validation score: {val_score:.4f}")
 
     return model
 
@@ -115,15 +111,11 @@ def train_pitcher(milb_pitchers, pitcher_columns, year_plus_num_columns):
     y = milb_pitchers[year_plus_num_columns]
     
     # Split the data into training and validation sets
-    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=int(time.time()))
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
     
     # Create the model and train it on the training set
     model = LinearRegression()
     model.fit(X_train, y_train)
-    
-    # Optionally, you can evaluate the model on the validation set
-    val_score = model.score(X_val, y_val)
-    print(f"Validation score: {val_score:.4f}")
 
     return model
 
