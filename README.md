@@ -18,6 +18,16 @@ Dylan Crews is the #1 prospect in baseball according to [MLB.com prospect rankin
 
 ![Crews K and BB](images/crews_k_and_bb.png)
 
+The linear regression model predicts that Crews' statline will progress as follows:
+
+- Debut Year: .222/.272/.366 with a .278 wOBA, 23.6% K%, and 18.1% BB%
+
+- 1 Year After Debut: .243/.297/.408 with a .305 wOBA, 22.5% K%, and 16.3% BB%
+
+- 2 Years After Debut: .290/.358/.455 with a .364 wOBA, 19.5% K%, and 10.8% BB%
+
+Overall, the model predicts that Crews will become an above average hitter the year after his debut, and one of the best hitters in the legaue two years after his debut.
+
 ## Requirements
 
 - requests
