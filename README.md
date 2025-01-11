@@ -1,4 +1,4 @@
-# MiLB Player Future Statline Projection
+# MiLB Player Future Statline Projector
 
 ## Summary
 
