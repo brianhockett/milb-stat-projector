@@ -12,11 +12,11 @@ Dylan Crews is the #1 prospect in baseball according to [MLB.com prospect rankin
 
 ** Dylan Crews Slashline Predictions **
 
-![Crews slashline](images/crews_slashline)
+![Crews slashline](images/crews_slashline.png)
 
 ** Dylan Crews Strikeout and Walk Rate Predictions **
 
-![Crews K and BB](images/crews_k_and_bb)
+![Crews K and BB](images/crews_k_and_bb.png)
 
 ## Requirements
 
