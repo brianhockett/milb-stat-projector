@@ -1,1 +1,1 @@
-# stat-projector
+# milb-stat-projector
