@@ -5,3 +5,4 @@ numpy
 python-TIME
 streamlit
 matplotlib
+scikit-learn

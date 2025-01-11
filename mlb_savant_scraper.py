@@ -37,6 +37,7 @@ for year in years:
     
     if data:
         df = pd.DataFrame(data, columns = headers)
+        df['Year'] = year
         filename = os.path.join(data_dir, f'mlb_batter_{year}.csv')
         df.to_csv(filename, index = False)
         print(f'MLB Batter Data for {year} Saved to {filename}\n')
@@ -73,6 +74,7 @@ for year in years:
     
     if data:
         df = pd.DataFrame(data, columns = headers)
+        df['Year'] = year
         filename = os.path.join(data_dir, f'mlb_pitcher_{year}.csv')
         df.to_csv(filename, index = False)
         print(f'MLB Pitcher Data for {year} Saved to {filename}\n')
