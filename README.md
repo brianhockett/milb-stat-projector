@@ -19,22 +19,22 @@ This streamlit application allows users to select a minor league baseball player
 
 - Clone and enter the repository:
 
-  '''sh
+  ```sh
   git clone <repo_url>
   cd <repo_directory>
-  '''
+  ```
 
 - Install requirements
 
-  '''sh
+  ```sh
   pip install -r requirements.txt
-  '''
+  ```
 
 - Run App
 
-'''sh
+```sh
 streamlit run app.py
-'''
+```
 
 - In a browser open the local host url shown by streamlit
 
