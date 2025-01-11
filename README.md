@@ -26,7 +26,7 @@ The linear regression model predicts that Crews' statline will progress as follo
 
 - 2 Years After Debut: .290/.358/.455 with a .364 wOBA, 19.5% K%, and 10.8% BB%
 
-Overall, the model predicts that Crews will become an above average hitter the year after his debut, and one of the best hitters in the legaue two years after his debut.
+The model predicts that Crews will start his career as a poor hitter, become a slightly below average hitter the year after his debut, and a well above average hitter two years after his debut.
 
 ## Requirements
 
