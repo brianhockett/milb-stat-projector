@@ -32,9 +32,9 @@ This streamlit application allows users to select a minor league baseball player
 
 - Run App
 
-```sh
+  ```sh
 streamlit run app.py
-```
+  ```
 
 - In a browser open the local host url shown by streamlit
 
