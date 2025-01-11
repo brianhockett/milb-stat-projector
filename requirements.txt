@@ -5,4 +5,3 @@ numpy
 python-TIME
 streamlit
 matplotlib
-pybaseball
