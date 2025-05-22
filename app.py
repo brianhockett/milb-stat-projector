@@ -6,6 +6,10 @@ import os
 from model import process_statcast, combine_leagues, train_batter, train_pitcher
 from plots import plot_slashline, plot_k_and_bb
 
+
+
+
+
 st.title("MLB Stat Projector for Current MiLB Players")
 
 col1, col2 = st.columns(2)
